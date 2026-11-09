@@ -23,7 +23,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--bg);
@@ -49,6 +49,7 @@ a:hover { text-decoration: underline; }
 .topbar nav { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: .92rem; }
 .topbar nav a { color: var(--muted); }
 .topbar nav a:hover { color: var(--accent); text-decoration: none; }
+.topbar nav a.active { color: var(--text); font-weight: 600; }
 
 /* ---------- Layout ---------- */
 .layout {
@@ -82,13 +83,6 @@ h3 {
   color: var(--muted); margin: 30px 0 12px;
 }
 #about p { margin: 0 0 14px; }
-.stats {
-  display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px;
-  margin-top: 22px !important; padding: 14px 18px; border-radius: 10px;
-  background: var(--bg-soft); font-size: .93rem; color: var(--muted);
-}
-.stats b { color: var(--text); font-size: 1.1rem; margin-right: 4px; }
-.stats small { margin-left: auto; font-size: .8rem; }
 .note { color: var(--muted); font-size: .92rem; margin: -6px 0 0; }
 
 /* News & talks */
@@ -133,6 +127,7 @@ h3 {
   .avatar { margin: 0 auto 16px; width: 140px; height: 140px; }
   .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; }
   .links li, .links li:last-child { border: 0; padding: 0; }
-  .topbar nav { display: none; }
+  .topbar-inner { flex-direction: column; align-items: flex-start; gap: 6px; padding: 12px 20px; }
+  .topbar nav { gap: 2px 14px; font-size: .88rem; }
   .news li, .talks li { grid-template-columns: 1fr; gap: 0; }
 }
